@@ -141,9 +141,15 @@ bool list_empty (struct list *);
 /* Miscellaneous. */
 void list_reverse (struct list *);
 
+/* list.h */
+/* Priority_Scheduling_2.1 list_less_func 해석 */
 /* Compares the value of two list elements A and B, given
    auxiliary data AUX.  Returns true if A is less than B, or
    false if A is greater than or equal to B. */
+/* 보조 데이터 AUX가 주어지면 두 목록 요소 A와 B의 값을 비교합니다.
+   A가 B보다 작으면 참을 반환하고, 
+   A가 B보다 크거나 같으면 거짓을 반환합니다.
+*/
 typedef bool list_less_func (const struct list_elem *a,
                              const struct list_elem *b,
                              void *aux);
