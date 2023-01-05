@@ -40,6 +40,11 @@ struct thread;
  * This is kind of "parent class", which has four "child class"es, which are
  * uninit_page, file_page, anon_page, and page cache (project4).
  * DO NOT REMOVE/MODIFY PREDEFINED MEMBER OF THIS STRUCTURE. */
+/* "페이지"의 표현.
+ * 이것은 일종의 "상위 클래스"이며, 
+ * 여기에는 uninit_page, file_page, anon_page 및
+ * 페이지 캐시(project4)인 4개의 "자식 클래스"가 있습니다.
+ * 이 구조의 미리 정의된 구성원을 제거/수정하지 마십시오. */
 struct page {
 	const struct page_operations *operations;
 	void *va;              /* Address in terms of user space */
@@ -49,6 +54,8 @@ struct page {
 
 	/* Per-type data are binded into the union.
 	 * Each function automatically detects the current union */
+	/* 유형별 데이터는 공용체에 바인딩됩니다.
+	 * 각 함수는 현재 합집합을 자동으로 감지 */
 	union {
 		struct uninit_page uninit;
 		struct anon_page anon;

@@ -390,7 +390,7 @@ process_exit (void) {
 	 * TODO: project2/process_termination.html).
 	 * TODO: We recommend you to implement process resource cleanup here. */
 	
-	// P2-4 CLose all opened files
+	// P2-4 Close all opened files
 	for (int i = 0; i < FDT_MAX; i++) {
 		close(i);
 	}

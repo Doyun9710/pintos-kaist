@@ -155,7 +155,7 @@ page_fault (struct intr_frame *f) {
 			not_present ? "not present" : "rights violation",
 			write ? "writing" : "reading",
 			user ? "user" : "kernel");
-	// kill (f);
-	exit(-1);
+	// kill (f);	// PROJECT 1
+	exit(-1);		// PROJECT 2
 }
 

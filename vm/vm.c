@@ -1,4 +1,5 @@
 /* vm.c: Generic interface for virtual memory objects. */
+/* vm.c: 가상 메모리 개체에 대한 일반 인터페이스. */
 
 #include "threads/malloc.h"
 #include "vm/vm.h"
@@ -6,6 +7,9 @@
 
 /* Initializes the virtual memory subsystem by invoking each subsystem's
  * intialize codes. */
+
+/* 각 하위 시스템의 초기화 코드를 호출하여 
+ * 가상 메모리 하위 시스템을 초기화합니다. */
 void
 vm_init (void) {
 	vm_anon_init ();
